@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+
+#wrapper {
+    /* Kích thước màn hình là 1280 x 720 */
+    width: 100%;
+    height: 100vh;
+}
+
+.header-top
+{
+    background-color: #353535;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#header {
+    width: 100%;
+    padding:0px 30px;
+    margin-top:33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+  
+}
+
+#menu {
+    list-style:none;
+    display: flex;
+}
+
+#menu .item {
+    margin:0px 20px;
+}
+
+#menu .item a {
+    color:#626A67;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 15px;
+
+}
+
+#menu .item a::after
+{
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #FFCCFF;
+    position: absolute;
+    bottom: 0;
+    top: 20px;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+}
+
+#menu .item a:hover:after
+{
+    width: 50%;
+    transform: translateX(100%);
+}
+
+#actions {
+    display: flex;
+}
+
+#actions .item {
+    margin-left:22px;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+#banner {
+    width: 100%;
+    background-image :url("anhps/lactay/7da1d73aa29c64c23d8d.jpg");
+    height: 463px;
+    margin-top:40px;
+    display: flex;
+    padding:0px 133px;
+    position:relative;
+}
+
+#banner .box-left ,#banner .box-right {
+    width: 50%;
+}
+
+#banner  .box-left h2 {
+    font-size:48px;
+    margin-top:70px;
+    color: #fff;
+}
+
+#banner .box-left p {
+    color: #fff;
+    font-weight: bold;
+}
+
+#banner .box-left button {
+    width: 191px;
+    height: 40px;
+    margin-top:41px;
+    background: #003333;
+    border:none;
+    outline:none;
+    color:#fff;
+    font-weight: bold;
+    border-radius: 20px;
+    transition:0.4s;
+}
+
+#banner .box-left button:hover {
+    background:orange;
+}
+
+#banner .box-right {
+    padding-left:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#banner .box-right img {
+    margin:0px 10px;
+    animation :animation 3s infinite linear; 
+    border-radius: 90px 5px;
+}
+
+
+#banner .box-right img:nth-child(1)
+{
+    animation-delay: 0.5s;
+}
+#banner .box-right img:nth-child(2)
+{
+    
+    animation-delay: 1s;
+}
+
+@keyframes animation {
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+
+.to-bottom {
+    position:absolute;
+    bottom:-40px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+
+#wp-products h4 {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size:32px;
+    color:#626a67;
+    padding-left: 30px;
+    display: block;
+    border-bottom: 5px solid #CCFFFF;
+    background: #CCFFFF;
+}
+
+
+#wp-products {
+    padding-top:116px;
+    padding-bottom: 78px;
+    /* padding-left:34px;
+    padding-right:34px; */
+}
+
+#wp-products h2 {
+    text-align: center;
+    margin-bottom: 76px;
+    font-size:32px;
+    color:#626a67;
+}
+
+
+#list-products {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  
+}
+
+#list-products .item {
+    width: 320px;
+    height: 500px;
+    background: #333333;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(47,79,79);
+}
+
+
+#list-products .item:hover
+{
+    transform: scale(1.07);
+    transition: all 0.4s ease-in-out;
+    opacity: 0.6;
+}
+
+#list-products .item img {
+    display: block;
+    margin:0px auto;
+    /* margin-top:17px; */
+    border-radius: 20px;
+}
+
+#list-products .item .stars {
+
+    display: flex;
+    margin:0px auto;
+    width: 50%;
+    padding-top: 10px;
+}
+
+#list-products .item .name {
+    text-align: center;
+    color:#fff;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+#list-products .item .desc {
+    text-align: center;
+    color:#626a67;
+}
+
+#list-products .item .price {
+    text-align: center;
+    color: #00CC00;
+    font-weight: bold;
+    margin-top:20px;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+#products-sale
+{
+    padding-top:116px;
+    padding-bottom: 78px;
+    text-decoration: none;
+}
+
+#products-sale a
+{
+    text-decoration: none;
+}
+
+#products-sale h2 
+{
+    text-align: center;
+    margin-bottom: 76px;
+    font-size:32px;
+    color:#626a67;
+}
+
+#list-products-sale
+{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+#list-products-sale .item-sale 
+{
+    width: 320px;
+    height: 550px;
+    background: #333333;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(47,79,79);
+}
+
+#list-products-sale .item-sale:hover
+{
+    transform: scale(1.07);
+    transition: all 0.4s ease-in-out;
+    opacity: 0.6;
+}
+
+#list-products-sale .item-sale img 
+{
+    display: block;
+    margin:0px auto;
+    /* margin-top:17px; */
+    border-radius: 20px;
+}
+
+#list-products-sale .item-sale .stars-sale 
+{
+    display: flex;
+    margin:0px auto;
+    width: 50%;
+    padding-top: 10px;
+}
+
+#list-products-sale .item-sale .name-sale 
+{
+    text-align: center;
+    color:#fff;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+#list-products-sale .item-sale .desc-sale
+{
+    text-align: center;
+    color:#626a67;
+}
+
+#list-products-sale .item-sale .price-sale
+{
+    text-align: center;
+    color: #00CC00;
+    font-weight: bold;
+    margin-top:20px;
+    text-decoration: line-through;
+}
+
+#list-products-sale .item-sale .price-sale-bottom
+{
+    text-align: center;
+    color: #CCFFFF;
+    font-weight: bold;
+    margin-top:5px; 
+}
+
+
+#products-banner-botton
+{
+    /* padding-top:116px;
+    padding-bottom: 78px; */
+    text-decoration: none;
+}
+
+#products-banner-botton h2 
+{
+    text-align: center;
+    margin-bottom: 76px;
+    font-size:32px;
+    color:#626a67;
+}
+
+
+
+#banner-botton 
+{
+    width: 100%;
+    background-image :url("anhps/lactay/7da1d73aa29c64c23d8d.jpg");
+    height: 350px;
+    text-align: center;
+    padding:0px 133px;
+    position:relative;
+    text-decoration: none;
+}
+
+#banner-botton .box-left-botton
+{
+    width: 100%;
+}
+
+#banner-botton  .box-left-botton h2 {
+    font-size: 40px;
+    margin-top:70px;
+    color:#fff;
+    padding-top: 30px;
+    text-transform: uppercase;
+}
+
+#banner-botton .box-left-botton p {
+    color: white;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#banner-botton .box-left-botton a {
+    width: 191px;
+    height: 40px;
+    margin-top:41px;
+    border:none;
+    outline:none;
+    color:#fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+#footer {
+    width: 100%;
+    background:rgb(0,0,0,0.79);
+    height: 322px;
+    padding:0px 63px;
+    padding-top:57px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .box {
+    width: 250px;
+    color:#fff;
+}
+
+#footer .box .quick-menu {
+    margin-top: 15px;
+
+}
+
+
+#footer .box .quick-menu .item{
+    margin-bottom:10px;
+
+}
+#footer .box .quick-menu ,.item a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#footer .box p
+{
+    font-size: 13px;
+    color: #993366;
+}
+
+#footer .box form input {
+    width: 294px;
+    height: 42px;
+    background:transparent;
+    padding-left:20px;
+    color:#fff;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+#footer .box form button {
+    background:#362f2f;
+    box-shadow: 5px 5px 4px rgba(0,0,0.25);
+    width: 230px;
+    height: 38px;
+    margin-top:13px;
+    color:#fff;
+    border-radius: 20px;
+    transition: 0.4s;
+    border: none;
+}
+
+#footer .box form button:hover {
+    background: #99CC00;
+}
+
+.footer-botton
+{
+    background-color: #330000;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+body::-webkit-scrollbar
+{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background-image: linear-gradient(to bottom, #990000, #FF0000, #FFFF66, #FFFF66);
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track
+{
+    background-color: white;
+    border-radius: 20px;
+}
